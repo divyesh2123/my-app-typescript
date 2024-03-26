@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { IUser } from './types/IUser'
+import { User } from './User';
 
 export const DisplayData = () => {
 
@@ -19,9 +20,9 @@ export const DisplayData = () => {
   return (
    <>
    {
-    data.map((c:IUser)=>{
+    data.map((c:IUser,index : number)=>{
 
-        return (<div>{c.body}</div>)
+        return (<User index={index }  user={ c}/>)
     })
    }
    </>
